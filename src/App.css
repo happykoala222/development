@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  margin: 0;
+  font-family: 'Syne', sans-serif;
 }
 
 .App-logo {
@@ -22,6 +24,108 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.MuiFormControl-root {
+  border: 0;
+  margin: 0;
+  display: inline-flex;
+  padding: 0;
+  position: relative;
+  min-width: 0;
+  flex-direction: column;
+  vertical-align: top;
+}
+.MuiFormGroup-root {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.main-body {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 35px 0 50px;
+  padding: 25px 20px 0;
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px #d2d2d2;
+  min-width: 20vh;
+  padding: 3vmin;
+  height: fit-content;
+  padding-top: 0;
+}
+
+.sidebar-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1vmin;
+}
+
+.header {
+  display: flex;
+  gap: 4vmin;
+  padding: 4vmin;
+}
+
+.reset {
+  font-weight:600;
+  font-size:2vmin;
+
+  margin-bottom:0;
+  cursor: default;
+  
+}
+
+.reset-group {
+  color: gray;
+  fill: gray;
+}
+
+.reset-group:hover {
+  color: #332f2f !important;
+  fill: #332f2f
+}
+
+
+
+.reset svg {
+  width: 1.5vmin;
+  align-self: center;
+  align-content: center;
+  margin-top: 8px;
+  margin-left: 3px;
+  margin-bottom: -1px;
+}
+
+
+
+.header h1 {
+  font-size: 7vh;
+  /* font-family: 'RibesBlack'; */
+  font-family: 'Syne', sans-serif;
+  /* font-weight: 400; */
+  color: #272323
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3vmin;
+  margin: 2vh;
+  
+}
+
+.header-img {
+  height: 20vmin;
+  animation: App-logo-spin infinite 10s linear;
 }
 
 .App-link {
