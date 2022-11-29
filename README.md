@@ -1,9 +1,9 @@
 # Development
 
-### Link to Deployed Website
-If you used the stencil code, this is `https://<your GitHub username>.github.io/<name of your repository>`
+### Deployed Website: https://happykoala222.github.io/development/
 
 ### Goal and Value of the Application
+The goal of this a
 
 ### Usability Principles Considered
 
