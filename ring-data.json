@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Candy Ring",
+    "material": "Porcelain",
+    "price": 27.99,
+    "image": "https://i.pinimg.com/564x/81/a2/01/81a20192ccd810f7fc35912d47dc4ee7.jpg",
+    "style": "Statement",
+    "popularity": 12
+  },
+  {
+    "name": "Ruby Ring",
+    "material": "Gold",
+    "price": 51.99,
+    "image": "https://i.pinimg.com/736x/59/01/7f/59017f553bd70b263827caedebece88c.jpg",
+    "style": "Simple",
+    "popularity": 11
+  },
+  {
+    "name": "NYC Duo Ridge Ring",
+    "material": "Gold",
+    "price": 64.99,
+    "image": "https://cdn.shopify.com/s/files/1/0517/6996/6772/products/35674b5cae154263bc989491ac10e609_2000x.jpg?v=1632272032",
+    "style": "Statement",
+    "popularity": 10
+    
+  },
+  {
+    "name": "Melina Ring",
+    "material": "Clay",
+    "price": 7.99,
+    "image": "https://i.pinimg.com/736x/cf/b4/f5/cfb4f5dcb5cd77c9f322fe5f93342ec8.jpg",
+    "style": "Statement",
+    "popularity": 9
+  },
+  {
+    "name": "Ethan Ring",
+    "material": "Clay",
+    "price": 7.99,
+    "image": "https://i.pinimg.com/736x/db/f1/45/dbf1457c2d449bf8081046f86ae621cd.jpg",
+    "style": "Statement",
+    "popularity": 8
+  },
+  {
+    "name": "Hannah Ring",
+    "material": "Silver",
+    "price": 39.99,
+    "image": "https://i.pinimg.com/564x/2f/77/ff/2f77ffefa9e30065bb6da01491ece0f4.jpg",
+    "style": "Simple",
+    "popularity": 7
+  },
+  {
+    "name": "Daisy Ring",
+    "material": "Gold",
+    "price": 79.99,
+    "image": "https://i.pinimg.com/736x/c1/49/00/c149000f2a32a996d11c2869605d746c.jpg",
+    "style": "Simple",
+    "popularity": 6
+  },
+  {
+    "name": "Rainbow Ring",
+    "material": "Resin",
+    "price": 1.99,
+    "image": "https://i.pinimg.com/564x/f7/e9/3a/f7e93af3d3a85fa01e261d0f6087a4f8.jpg",
+    "style": "Statement",
+    "popularity": 5
+  },
+  {
+    "name": "Form Ring",
+    "material": "Silver",
+    "price": 49.99,
+    "image": "https://i.pinimg.com/736x/e1/e1/8f/e1e18f5e85762e0df988a155274b2bab.jpg",
+    "style": "Simple",
+    "popularity": 4
+  },
+  {
+    "name": "Celestial Ring",
+    "material": "Gold",
+    "price": 79.99,
+    "image": "https://i.pinimg.com/564x/7e/51/10/7e5110976397c16aff702022b7ebbe8a.jpg",
+    "style": "Simple",
+    "popularity": 3
+  },
+  {
+    "name": "Bezel Ring",
+    "material": "Gold",
+    "price": 89.99,
+    "image": "https://i.pinimg.com/736x/7c/9d/0d/7c9d0dc1f4dc7988e811bb4a47558b95.jpg",
+    "style": "Simple",
+    "popularity": 2
+  },
+  {
+    "name": "Twisted Ring",
+    "material": "Resin",
+    "price": 6.99,
+    "image": "https://i.pinimg.com/564x/14/d7/2c/14d72cad69ae704eebe74688f6f7b7b1.jpg",
+    "style": "Statement",
+    "popularity": 1
+  }
+]
