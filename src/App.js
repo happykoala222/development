@@ -1,22 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { Card } from 'antd';
 import ringData from "./ring-data.json";
 import RingItem from './RingItem';
-// import Checkbox from './Checkbox'
-import { propTypes } from 'react-bootstrap/esm/Image';
 import React from 'react';
 import { useState, useEffect } from 'react';
-// import Button from 'antd';
+import CartAggregator from './CartAggregator';
 
 
 function App() {
-  // const {  Card  } = antd;
-  const { Meta } = Card;
 
   // sort by
   const [defaultSort, setDefaultSort] = useState(true);
-  const [priceSort, setPriceSort] = useState (false)
 
   // style filters
   const [simpleFilter, setSimpleFilter] = useState(false);
@@ -89,7 +83,7 @@ function App() {
       styles.push('Statement')
     }
     applyFilters(materials, styles, cartFilter)
-  }, [goldFilter, silverFilter, resinFilter, porcelainFilter, clayFilter,simpleFilter, statementFilter, cartFilter, cartItems])
+  }, [goldFilter, silverFilter, resinFilter, porcelainFilter, clayFilter, simpleFilter, statementFilter, cartFilter, cartItems])
 
   const applyFilters = (materials, styles, filterOn) => {
     const toBeDisplayed = []
@@ -117,7 +111,6 @@ function App() {
         toBeDisplayed.push(item)
       }
     }
-
     if(filterOn) {
       setDisplayItems(toBeDisplayed.filter((item) => cartItems.includes(item)))
     } else {
@@ -125,7 +118,7 @@ function App() {
     }
   };
 
-  
+  // checkbox mini component
   const Checkbox = ({ label, value, onChange }) => {
     return (
       <label>
@@ -135,6 +128,7 @@ function App() {
     );
   };
 
+  // radio mini component
   const CircleSelect = ({ label, value, onChange }) => {
     return (
       <label >
@@ -143,11 +137,9 @@ function App() {
       </label>
     );
   };
-
   return (
     <div className="App">
       <div className='header'>
-        {/* <img className='header-img' src='./pink-ring.png'></img> */}
         <img className='header-img' src='https://i.pinimg.com/564x/d3/50/c6/d350c6fc6c0fe4a2514d5a7541c41869.jpg'></img>
         <h1>Cushing Street Rings</h1>
       </div>
@@ -185,7 +177,6 @@ function App() {
               eventKey='hi'
               label="Resin"
               value={resinFilter}
-              // onChange={() => handleMaterialFilter('Resin')}
               onChange={() => setResinFilter(!resinFilter)}
             />
             <Checkbox
@@ -220,42 +211,23 @@ function App() {
               onChange={() => setCartFilter(!cartFilter)}
             />
           </div>
-          
-          <div className='sidebar-group'>
-            {cartItems.length > 0 &&
-            <p style={{fontWeight:'600', fontSize:'2vmin', color:'rgb(222, 184, 177)'}}>Cart Total: ${cartItems.map((item) => item.price).reduce((accumulator, currentValue) => accumulator + currentValue)}</p>
-            } 
-            {cartItems.length === 0 &&
-            <p style={{fontWeight:'600', fontSize:'2vmin', color:'rgb(222, 184, 177)'}}>Cart Total: $0.00</p>
-            
-            }
-            
-          </div>
-
+          {/* Aggregates and displays cart total */}
+          <CartAggregator cartItems={cartItems} />
         </div>
         <div className='card-grid'>
-          {displayItems && displayItems.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
+          {displayItems && displayItems.map((item, index) => ( 
             <RingItem
-            name={item.name}
-            image={item.image}
-            material={item.material}
-            price={item.price}
-            style={item.style}
             cartItems={cartItems}
             setCartItems={setCartItems}
             item={item}
             />
           ))}
-          
         </div>
-        
-
       </div>
       <div>
-
       </div>
   </div>
-);
+  );
 }
 
 export default App;

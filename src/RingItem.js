@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { Button } from 'antd';
 
 function RingItem(props) {
-  // const {  Card  } = antd;
   const { Meta } = Card;
   const [inCart, setInCart] = useState(false)
 
@@ -15,23 +14,23 @@ function RingItem(props) {
 
   const handleRemoveFromCart = () => {
     setInCart(!inCart)
-    props.setCartItems([...props.cartItems, props.item].filter((item) => item.name !== props.name));
-    console.log('removed: ', [...props.cartItems, props.item].filter((item) => item.name !== props.name))
+    props.setCartItems([...props.cartItems, props.item].filter((item) => item.name !== props.item.name));
+    console.log('removed: ', [...props.cartItems, props.item].filter((item) => item.name !== props.item.name))
   };
 
   return (
       <Card
         hoverable
-        style={{ width: 300, backgroundColor: '#f6f6f6',fontFamily: 'Syne' }}
-        cover={<img alt="example" src={props.image} style={{maxHeight:300,}}/>}
+        style={{ width: 300, backgroundColor: '#f6f6f6', fontFamily: 'Syne' }}
+        cover={<img alt="example" src={props.item.image} style={{maxHeight:'300px'}}/>}
       >
         <Meta
-          title={props.name}
-          description={props.material}
+          title={props.item.name}
+          description={props.item.material}
         />
         <div className="additional">
-          <p>Style: {props.style}</p>
-          <p  className="price">${props.price}</p>
+          <p>Style: {props.item.style}</p>
+          <p  className="price">${props.item.price}</p>
           {props.cartItems.includes(props.item) &&
           <Button type="primary" style={{color:'#371b15', backgroundColor:'#deb8b1'}} onClick={() => handleRemoveFromCart()}>Remove from Cart</Button>
           }
@@ -40,7 +39,7 @@ function RingItem(props) {
           }
         </div>
       </Card>
-);
+  );
 }
 
 export default RingItem;
